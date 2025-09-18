@@ -40,13 +40,14 @@ def main():
         
         print(f"SCORE\nUSER:{user_score}\nCOMPUTER:{comp_score}")
 
-        # CHALLENGE: MAKE SURE THE PROGRAM RUNS ANOTHER RUN ONLY IF THE USER ENTERS "yes"
-        anotherGame = input("Do you want to play again (yes/no): ").lower()
-
         # Keep prompting until the user replies "yes" or "no"
-        while anotherGame != "yes" and anotherGame != "no":
-            print("Please enter yes or no") 
+        while True:
             anotherGame = input("Do you want to play again (yes/no): ").lower()
+
+            if anotherGame != "yes" and anotherGame != "no":
+                print("Please enter yes or no") 
+            else:
+                break
 
         if anotherGame == "no":
             break
