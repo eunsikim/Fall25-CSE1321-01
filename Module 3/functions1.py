@@ -24,6 +24,8 @@ def main():
             num2 = int(input("Enter another number: "))
 
             print(addition(num1, num2))
+
+            print("Hello World", end = ", ")
         elif option == "X":
             break
 
