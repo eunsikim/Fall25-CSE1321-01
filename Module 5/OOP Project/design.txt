@@ -1,0 +1,58 @@
+Components:
+Student
+⦁	id
+⦁	password
+⦁	name
+⦁	courses registered -> Dictionary:
+	{
+		Course Obj: Grade Obj
+	}
+⦁	register_course(): Whenever a student registers 
+    for a course, we need to update the course 
+    registered and create a Grade obj. Also, 
+    decrease the capacity of the course
+⦁	print schedule()
+⦁	view my grades()
+
+Staff
+⦁	id
+⦁	password
+⦁	name
+⦁	add_course()
+⦁	update_course()
+⦁	remove_course()
+
+Faculty
+⦁	id
+⦁	password
+⦁	name
+⦁	courses assigned -> List of Course objs
+⦁	update_grade(course obj, student obj)
+
+Course
+⦁	CRN
+⦁	Name
+⦁	Time
+⦁	Date
+⦁	Capacity
+⦁	Instructor -> Faculty obj
+⦁	Pre-requisites -> Dictionary
+	{
+		Course obj: [String(letter grade), Boolean]
+	}
+⦁	decrease seat()
+
+course manager
+⦁	course_list -> List of course objs (all courses offered)
+⦁	get all courses(): Print all course information
+
+Grades
+⦁	student -> student obj
+⦁	course -> course obj
+⦁	grade -> string
+
+Authentication
+⦁	user -> List of users (Student, Staff, and Faculty objs)
+⦁	registration()
+⦁	sign-in()
+
