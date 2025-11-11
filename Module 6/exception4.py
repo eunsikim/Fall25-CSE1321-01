@@ -1,0 +1,14 @@
+def main():
+    while True:
+        try:
+            num = int(input("Enter a number: "))
+
+            print(f"You entered the number: {num}")
+        except ValueError:
+            print("Please enter an integer value number")
+        finally:
+            print("This gets executed no matter what")
+
+
+if __name__ == "__main__":
+    main()
